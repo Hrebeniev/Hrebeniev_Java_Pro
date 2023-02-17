@@ -16,18 +16,18 @@ public class Dog extends Animals {
     @Override
     public void run(double distance) {
         if ((distance > 0) && (distance <= maxRunDistance)) {
-            System.out.println("Собака пробежала " + distance + " м.");
+            System.out.println("Dog run " + distance + " meters");
         } else {
-            System.out.println("Дистанция превышает допустимое значение");
+            System.out.println("False");
         }
     }
 
     @Override
     public void swim(double distance) {
         if ((distance > 0) && (distance <= maxSwimDistance)) {
-            System.out.println("Собака проплыла " + distance + " м.");
+            System.out.println("Dog swim " + distance + " meters");
         } else {
-            System.out.println("Дистанция превышает допустимое значение");
+            System.out.println("False");
         }
     }
 }

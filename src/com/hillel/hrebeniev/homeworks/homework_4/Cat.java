@@ -16,14 +16,14 @@ public class Cat extends Animals {
     @Override
     public void run(double distance) {
         if ((distance > 0) && (distance <= maxRunDistance)) {
-            System.out.println("Кот пробежал " + distance + " м.");
+            System.out.println("Cat run " + distance + " meters");
         } else {
-            System.out.println("Дистанция превышает допустимое значение");
+            System.out.println("False");
         }
     }
 
     @Override
     void swim(double distance) {
-        System.out.println("Кот не умеет плавать");
+        System.out.println("Cat do not swim");
     }
 }
