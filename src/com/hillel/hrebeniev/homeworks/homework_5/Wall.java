@@ -1,18 +1,23 @@
 package com.hillel.hrebeniev.homeworks.homework_5;
 
-class Wall extends Obstacle {
-    private int height;
+public class Wall implements Obstacle {
+    final String name = "Wall";
+    private final int height;
 
     public Wall(int height) {
         this.height = height;
     }
 
-    public int getHeight() {
-        return height;
-    }
-
     @Override
-    public void overcome(Participant c) {
-        c.jump(getHeight());
+    public boolean overcome(Participant participant) {
+        //Початок стрибків
+        participant.jump();
+        if (participant.getJumpHeight() >= height) {
+            System.out.println("Participant " + participant.getName() + " overcame " + name + " " + height + " m");
+            participant.addPassedObstacle();
+            return true;
+        }
+        System.out.println("Participant " + participant.getName() + " didn't overcome " + name + " " + height + " m");
+        return false;
     }
 }
