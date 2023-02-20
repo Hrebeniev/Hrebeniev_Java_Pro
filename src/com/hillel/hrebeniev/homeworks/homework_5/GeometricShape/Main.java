@@ -1,9 +1,6 @@
 package com.hillel.hrebeniev.homeworks.homework_5.GeometricShape;
 
-import com.hillel.hrebeniev.homeworks.homework_5.GeometricShape.Circle;
-import com.hillel.hrebeniev.homeworks.homework_5.GeometricShape.GeometricShape;
-import com.hillel.hrebeniev.homeworks.homework_5.GeometricShape.Square;
-import com.hillel.hrebeniev.homeworks.homework_5.GeometricShape.Triangle;
+import com.hillel.hrebeniev.homeworks.homework_5.Interfaces.GeometricShape;
 
 public class Main {
     public static void main(String[] args) {

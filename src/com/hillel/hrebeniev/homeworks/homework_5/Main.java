@@ -1,6 +1,6 @@
 package com.hillel.hrebeniev.homeworks.homework_5;
 
-import com.hillel.hrebeniev.homeworks.homework_5.Obstacles.Obstacle;
+import com.hillel.hrebeniev.homeworks.homework_5.Interfaces.Obstacle;
 import com.hillel.hrebeniev.homeworks.homework_5.Obstacles.Treadmill;
 import com.hillel.hrebeniev.homeworks.homework_5.Obstacles.Wall;
 import com.hillel.hrebeniev.homeworks.homework_5.Participants.Cat;

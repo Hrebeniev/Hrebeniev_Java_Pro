@@ -1,5 +1,7 @@
 package com.hillel.hrebeniev.homeworks.homework_5.GeometricShape;
 
+import com.hillel.hrebeniev.homeworks.homework_5.Interfaces.GeometricShape;
+
 public class Circle implements GeometricShape {
     private double radius;
 

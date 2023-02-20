@@ -1,4 +1,4 @@
-package com.hillel.hrebeniev.homeworks.homework_5.Obstacles;
+package com.hillel.hrebeniev.homeworks.homework_5.Interfaces;
 
 import com.hillel.hrebeniev.homeworks.homework_5.Participants.Participant;
 

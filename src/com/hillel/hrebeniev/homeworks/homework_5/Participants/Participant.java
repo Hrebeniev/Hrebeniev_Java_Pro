@@ -1,7 +1,7 @@
 package com.hillel.hrebeniev.homeworks.homework_5.Participants;
 
-import com.hillel.hrebeniev.homeworks.homework_5.Jumping;
-import com.hillel.hrebeniev.homeworks.homework_5.Running;
+import com.hillel.hrebeniev.homeworks.homework_5.Interfaces.Jumping;
+import com.hillel.hrebeniev.homeworks.homework_5.Interfaces.Running;
 
 public abstract class Participant implements Running, Jumping {
 
