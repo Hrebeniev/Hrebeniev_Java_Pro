@@ -1,6 +1,8 @@
-package com.hillel.hrebeniev.homeworks.homework_5;
+package com.hillel.hrebeniev.homeworks.homework_5.Obstacles;
 
-class Treadmill implements Obstacle {
+import com.hillel.hrebeniev.homeworks.homework_5.Participants.Participant;
+
+public class Treadmill implements Obstacle {
     final String name = "Racetrack";
     private final int length;
 
