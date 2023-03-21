@@ -15,4 +15,5 @@ public class FileMaxSizeReachedException extends Exception {
                 currentSize, maxSize, path);
         System.err.println(errMessage);
     }
+
 }

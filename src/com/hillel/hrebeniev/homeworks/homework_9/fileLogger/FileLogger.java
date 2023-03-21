@@ -1,6 +1,7 @@
 package com.hillel.hrebeniev.homeworks.homework_9.fileLogger;
 
 import com.hillel.hrebeniev.homeworks.homework_9.logger.AbstractLogger;
+import com.hillel.hrebeniev.homeworks.homework_9.logger.LoggerConfiguration;
 import com.hillel.hrebeniev.homeworks.homework_9.logger.LoggingLevel;
 
 import static com.hillel.hrebeniev.homeworks.homework_9.logger.LoggingLevel.INFO;
@@ -14,15 +15,13 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static com.hillel.hrebeniev.homeworks.homework_9.logger.LoggingLevel.INFO;
-
 public class FileLogger extends AbstractLogger {
 
     private final FileLoggerConfiguration configuration;
     private File currentLogFile;
 
 
-    public FileLogger(FileLoggerConfiguration configuration) {
+    public FileLogger(LoggerConfiguration configuration) {
         this.configuration = configuration;
         this.currentLogFile = createNewLogFile();
     }
@@ -85,9 +84,8 @@ public class FileLogger extends AbstractLogger {
 
     //write a message to the file
     public void writeToFile(File currentLogFile, String message) {
-        try {
-            FileWriter fileWriter = new FileWriter(currentLogFile, true);
-            BufferedWriter writer = new BufferedWriter(fileWriter);
+        try (FileWriter fileWriter = new FileWriter(currentLogFile, true);
+            BufferedWriter writer = new BufferedWriter(fileWriter)) {
             writer.write(message);
             writer.newLine();
             writer.close();

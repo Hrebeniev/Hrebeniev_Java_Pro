@@ -10,46 +10,52 @@ import java.io.IOException;
 public class FileLoggerConfLoader extends LoggerConfLoader {
 
 
-    public static FileLoggerConfiguration load(String configPath) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(configPath));
-        String path = null;
-        String logLevel = null;
-        long maxFileSize = 0;
-        String fileFormat = null;
-        String line;
+    public static FileLoggerConfiguration LoggerConfiguration(String configPath) throws IOException {
+        String path;
+        String logLevel;
+        long maxFileSize;
+        String fileFormat;
+        try (BufferedReader reader = new BufferedReader(new FileReader(configPath))) {
 
-        while ((line = reader.readLine()) != null) {
-            String[] parts = line.split(": ");
-            if (parts.length != 2) {
-                continue;
+            path = null;
+            logLevel = null;
+            maxFileSize = 0;
+            fileFormat = null;
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(": ");
+                if (parts.length != 2) {
+                    continue;
+                }
+
+                String key = parts[0].trim().toUpperCase();
+                String value = parts[1].trim();
+
+                switch (key) {
+                    case "FILE":
+                        path = value;
+                        break;
+                    case "LEVEL":
+                        logLevel = value.toUpperCase();
+                        break;
+                    case "MAX-SIZE":
+                        try {
+                            maxFileSize = Long.parseLong(value);
+                        } catch (NumberFormatException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case "FORMAT":
+                        fileFormat = value.toLowerCase();
+                        break;
+                    default:
+                        System.err.println("unknown key");
+                        break;
+                }
             }
-
-            String key = parts[0].trim().toUpperCase();
-            String value = parts[1].trim();
-
-            switch (key) {
-                case "FILE":
-                    path = value;
-                    break;
-                case "LEVEL":
-                    logLevel = value.toUpperCase();
-                    break;
-                case "MAX-SIZE":
-                    try {
-                        maxFileSize = Long.parseLong(value);
-                    } catch (NumberFormatException e) {
-                        e.printStackTrace();
-                    }
-                    break;
-                case "FORMAT":
-                    fileFormat = value.toLowerCase();
-                    break;
-                default:
-                    System.err.println("unknown key");
-                    break;
-            }
+            reader.close();
         }
-        reader.close();
         return new FileLoggerConfiguration(path, LoggingLevel.valueOf(logLevel), maxFileSize,
                 fileFormat);
     }

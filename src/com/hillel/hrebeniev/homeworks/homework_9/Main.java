@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         String pathToConfig =
-                "C:\\Users\\nickh\\hillel\\Hrebeniev_Java_Pro\\src\\com\\hillel\\hrebeniev\\homeworks\\homework_9\\logConfig.txt";
+                "ю\\src\\com\\hillel\\hrebeniev\\homeworks\\homework_9\\logConfig.txt";
 
         FileLogger fileLogger = new FileLogger(FileLoggerConfLoader.load(pathToConfig));
         StdoutLogger stdoutLogger =

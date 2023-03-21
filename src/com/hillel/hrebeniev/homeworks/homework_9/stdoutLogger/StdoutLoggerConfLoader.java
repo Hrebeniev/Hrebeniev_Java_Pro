@@ -10,24 +10,25 @@ import java.io.IOException;
 public class StdoutLoggerConfLoader extends LoggerConfLoader {
 
     public static StdoutLoggerConfiguration load(String configPath) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(configPath));
-        String logLevel = null;
-        String line;
+        try (BufferedReader reader = new BufferedReader(new FileReader(configPath))) {
+            String logLevel = null;
+            String line;
 
-        while ((line = reader.readLine()) != null) {
-            String[] parts = line.split(": ");
-            if (parts.length != 2) {
-                continue;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(": ");
+                if (parts.length != 2) {
+                    continue;
+                }
+
+                String key = parts[0].trim().toUpperCase();
+                String value = parts[1].trim();
+
+                if (key.equals("LEVEL")) {
+                    logLevel = value.toUpperCase();
+                }
             }
-
-            String key = parts[0].trim().toUpperCase();
-            String value = parts[1].trim();
-
-            if (key.equals("LEVEL")) {
-                logLevel = value.toUpperCase();
-            }
+            reader.close();
+            return new StdoutLoggerConfiguration(LoggingLevel.valueOf(logLevel));
         }
-        reader.close();
-        return new StdoutLoggerConfiguration(LoggingLevel.valueOf(logLevel));
     }
 }
