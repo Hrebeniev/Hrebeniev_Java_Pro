@@ -54,7 +54,6 @@ public class FileLoggerConfLoader extends LoggerConfLoader {
                         break;
                 }
             }
-            reader.close();
         }
         return new FileLoggerConfiguration(path, LoggingLevel.valueOf(logLevel), maxFileSize,
                 fileFormat);
