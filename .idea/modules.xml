@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Hrebeniev_Java_Pro.iml" filepath="$PROJECT_DIR$/Hrebeniev_Java_Pro.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MathLibrary/MathLibrary.iml" filepath="$PROJECT_DIR$/MathLibrary/MathLibrary.iml" />
     </modules>
   </component>
 </project>
