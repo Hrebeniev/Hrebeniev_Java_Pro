@@ -13,7 +13,7 @@ public class FileMaxSizeReachedException extends Exception {
         String errMessage = String.format(
                 "File max size reached. Current size: %d bytes. Max size: %d bytes. Path %s",
                 currentSize, maxSize, path);
-        System.err.println(errMessage);
+
     }
 
 }
