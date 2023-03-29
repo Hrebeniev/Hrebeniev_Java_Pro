@@ -6,7 +6,7 @@ import com.hillel.hrebeniev.homeworks.homework_9.stdoutLogger.StdoutLogger;
 import com.hillel.hrebeniev.homeworks.homework_9.stdoutLogger.StdoutLoggerConfLoader;
 
 import java.io.IOException;
-
+// fix
 public class Main {
     public static void main(String[] args) throws IOException {
         String pathToConfig =

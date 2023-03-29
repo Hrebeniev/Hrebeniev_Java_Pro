@@ -1,5 +1,5 @@
 package com.hillel.hrebeniev.homeworks.homework_9.fileLogger;
-
+// fix
 public class FileMaxSizeReachedException extends Exception {
 
     long currentSize;

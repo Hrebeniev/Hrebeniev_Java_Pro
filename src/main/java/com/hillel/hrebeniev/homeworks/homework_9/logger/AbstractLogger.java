@@ -2,7 +2,7 @@ package com.hillel.hrebeniev.homeworks.homework_9.logger;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
+// fix
 public abstract class AbstractLogger {
 
 

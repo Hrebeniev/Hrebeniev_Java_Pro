@@ -2,3 +2,4 @@ FILE: .\out\logs\
 LEVEL: INFO
 MAX-SIZE: 256
 FORMAT: txt
+// fix

@@ -2,7 +2,7 @@ package com.hillel.hrebeniev.homeworks.homework_9.stdoutLogger;
 
 import com.hillel.hrebeniev.homeworks.homework_9.logger.AbstractLogger;
 import com.hillel.hrebeniev.homeworks.homework_9.logger.LoggingLevel;
-
+// fix
 public class StdoutLogger extends AbstractLogger {
     private StdoutLoggerConfiguration configuration;
 

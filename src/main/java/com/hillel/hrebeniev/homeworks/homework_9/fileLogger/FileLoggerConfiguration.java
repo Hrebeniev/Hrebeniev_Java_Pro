@@ -2,7 +2,7 @@ package com.hillel.hrebeniev.homeworks.homework_9.fileLogger;
 
 import com.hillel.hrebeniev.homeworks.homework_9.logger.LoggerConfiguration;
 import com.hillel.hrebeniev.homeworks.homework_9.logger.LoggingLevel;
-
+// fix
 public class FileLoggerConfiguration extends LoggerConfiguration {
     private final String path;
     private final LoggingLevel logLevel;

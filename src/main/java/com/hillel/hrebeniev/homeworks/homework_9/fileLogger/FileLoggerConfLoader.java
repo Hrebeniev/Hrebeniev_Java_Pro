@@ -6,7 +6,7 @@ import com.hillel.hrebeniev.homeworks.homework_9.logger.LoggingLevel;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
+// fix
 public class FileLoggerConfLoader extends LoggerConfLoader {
 
 

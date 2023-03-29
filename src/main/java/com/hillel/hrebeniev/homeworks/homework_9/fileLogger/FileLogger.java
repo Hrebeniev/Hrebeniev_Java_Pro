@@ -11,7 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
+// fix
 public class FileLogger extends AbstractLogger {
 
     private final FileLoggerConfiguration configuration;
