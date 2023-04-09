@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class SorterTest {
-//fixed
     @Test
     public void quickSortTest1() {
         int[] arr1 = {5, 3, 7, 1, 8, 2, 6, 4};
