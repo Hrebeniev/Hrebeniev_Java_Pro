@@ -3,6 +3,7 @@ package com.hillel.hrebeniev.homeworks.homework_12.phonebook;
 import lombok.Value;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Value
@@ -35,7 +36,7 @@ public class Phonebook {
             }
         }
         if (!recordList.isEmpty()) {
-            return recordList;
+            return Collections.emptyList();
         } else {
             return null;
         }
