@@ -4,19 +4,20 @@ import lombok.Value;
 
 import java.util.*;
 
-class ListUtils {
 
-    static void countOccurrence(List<String> list, String str) {
+public class ListUtils {
+
+    public static int countOccurrence(List<String> list, String str) {
         int count = 0;
         for (String word : list) {
             if (word.equals(str)) {
                 count++;
             }
         }
-        System.out.println("The word " + str + " occurs " + count + " times");
+        return count;
     }
 
-    static List<Integer> toList(int[] array) {
+    public static List<Integer> toList(int[] array) {
         List<Integer> list = new ArrayList<>();
         for (int i : array) {
             list.add(i);
@@ -29,7 +30,7 @@ class ListUtils {
         return new ArrayList<>(set);
     }
 
-    static void calcOccurrence(List<String> list) {
+    public static Map<String, Integer> calcOccurrence(List<String> list) {
         Map<String, Integer> wordCount = new HashMap<>();
 
         for (String word : list) {
@@ -39,19 +40,20 @@ class ListUtils {
                 wordCount.put(word, 1);
             }
         }
-
-        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
-            System.out.println(entry.getKey() + " = " + entry.getValue());
-        }
+        return wordCount;
     }
 
     @Value
-    static class Occurrence {
+    public static class Occurrence implements Comparable<Occurrence> {
         String word;
         int count;
+        @Override
+        public int compareTo(Occurrence occurrence) {
+            return this.word.compareTo(occurrence.word);
+        }
     }
 
-    static List<Occurrence> findOccurrence(List<String> list) {
+    public static List<Occurrence> findOccurrence(List<String> list) {
         Map<String, Integer> wordCount = new HashMap<>();
 
         for (String word : list) {

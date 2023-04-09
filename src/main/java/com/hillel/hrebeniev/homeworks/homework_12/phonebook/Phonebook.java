@@ -1,11 +1,14 @@
 package com.hillel.hrebeniev.homeworks.homework_12.phonebook;
 
+import lombok.Value;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class Phonebook {
+@Value
+public class Phonebook {
 
-    private final List<Record> records;
+    List<Record> records;
 
     public Phonebook() {
         records = new ArrayList<>();
@@ -15,7 +18,7 @@ class Phonebook {
         records.add(record);
     }
 
-    Record find(String name) {
+    public Record find(String name) {
         for (Record record : records) {
             if (record.getName().equals(name)) {
                 return record;
@@ -24,7 +27,7 @@ class Phonebook {
         return null;
     }
 
-    List<Record> findAll(String name) {
+    public List<Record> findAll(String name) {
         List<Record> recordList = new ArrayList<>();
         for (Record record : records) {
             if (record.getName().equals(name)) {

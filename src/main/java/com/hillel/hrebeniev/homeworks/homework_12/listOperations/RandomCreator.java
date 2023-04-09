@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-class RandomCreator {
+public class RandomCreator {
     public static List<String> createRandomStringList(int listSize) {
         List<String> list = new ArrayList<>();
         Random random = new Random();
