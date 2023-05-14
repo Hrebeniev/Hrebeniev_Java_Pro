@@ -16,11 +16,7 @@ public class Box<T extends Fruit> {
     }
 
     public void add(T fruit) {
-        if (fruits.isEmpty() || fruits.get(0).getClass().equals(fruit.getClass())) {
-            fruits.add(fruit);
-        } else {
-            System.out.println("Can't add fruit of different type to the box");
-        }
+        fruits.add(fruit);
     }
 
     public void add(List<T> newFruits) {
@@ -30,11 +26,10 @@ public class Box<T extends Fruit> {
     }
 
     public float getWeight() {
-        for (T fruit : fruits) {
-            weight += fruit.getWeight();
-        }
+        weight = fruits.size() * weight;
         return weight;
     }
+
 
     public boolean compare(Box<?> box) {
         return this.getWeight() == box.getWeight();
@@ -49,7 +44,7 @@ public class Box<T extends Fruit> {
             fruits.addAll(box.fruits);
             box.fruits.clear();
         } else {
-            System.out.println("It`s not possible to combine boxes with different types of fruit");
+            System.out.println("It is not possible to combine boxes with different types of fruit");
         }
     }
 }
