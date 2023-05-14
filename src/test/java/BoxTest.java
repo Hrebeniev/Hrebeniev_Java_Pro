@@ -40,12 +40,15 @@ class BoxTest {
     }
 
     @Test
-    void getWeightTest() {
+    void getWeightBox1Test() {
         Box<Apple> box1 = new Box<>();
         box1.add(new Apple());
         box1.add(new Apple());
         assertEquals(2.0f, box1.getWeight(), 0.001f);
+    }
 
+    @Test
+    void getWeightBox2Test() {
         Box<Orange> box2 = new Box<>();
         box2.add(new Orange());
         box2.add(new Orange());
