@@ -29,8 +29,7 @@ public class Basket {
     public List<Product> getAllDiscountedProducts(ProductType productType) {
         return productList.stream()
                 .filter(
-                        product -> product.getProductType().equals(productType) &&
-                                product.isDiscountAvailable())
+                        product -> product.getProductType().equals(productType))
                 .map(product -> {
                     double discountedPrice = product.getPrice() * 0.9;
                     return new Product(product.getId(), product.getProductType(), discountedPrice,
@@ -61,7 +60,8 @@ public class Basket {
                 .filter(
                         product -> product.getProductType().equals(productType)
                                 && product.getPrice() <= price
-                                && product.getCreatedDate().getYear() == now.getYear())
+                                && product.getCreatedDate().getYear() == now.getYear()
+                                && product.isDiscountAvailable())
                 .mapToDouble(Product::getPrice)
                 .sum();
     }
