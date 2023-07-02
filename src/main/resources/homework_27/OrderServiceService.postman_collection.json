@@ -1,0 +1,243 @@
+{
+  "info": {
+    "_postman_id": "8df0f435-fe25-4167-84ce-43e0e0308876",
+    "name": "OrderServiceService",
+    "description": "\n",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "13306068"
+  },
+  "item": [
+    {
+      "name": "addOrder",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml; charset=utf-8"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<?xml version=\"1.0\" ?>\n<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <S:Body>\n        <ns2:add xmlns:ns2=\"http://service.hillel.edu/\">\n            <arg0>\n                <id>491e46f7-45f3-4d19-a538-594f675fa15c</id>\n                <date>27.05.2023</date>\n                <cost>0.0</cost>\n            </arg0>\n        </ns2:add>\n    </S:Body>\n</S:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{OrderServicePortBaseUrl}}/orders",
+          "host": [
+            "{{OrderServicePortBaseUrl}}"
+          ],
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "addOrder response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <error>The element or type could not be found addOrder</error>\n  </soap:Body>\n</soap:Envelope>\n",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9999/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9999",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "xml",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/xml; charset=utf-8"
+            }
+          ],
+          "cookie": [],
+          "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <error>The element or type could not be found addOrderResponse</error>\n  </soap:Body>\n</soap:Envelope>\n"
+        }
+      ]
+    },
+    {
+      "name": "getAllOrders",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml; charset=utf-8"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<?xml version=\"1.0\" ?>\n<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <S:Body>\n        <ns2:getAll xmlns:ns2=\"http://service.hillel.edu/\"/>\n    </S:Body>\n</S:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{OrderServicePortBaseUrl}}/orders",
+          "host": [
+            "{{OrderServicePortBaseUrl}}"
+          ],
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "getAllOrders response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <error>The element or type could not be found getAllOrders</error>\n  </soap:Body>\n</soap:Envelope>\n",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9999/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9999",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "xml",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/xml; charset=utf-8"
+            }
+          ],
+          "cookie": [],
+          "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <error>The element or type could not be found getAllOrdersResponse</error>\n  </soap:Body>\n</soap:Envelope>\n"
+        }
+      ]
+    },
+    {
+      "name": "getOrderById",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml; charset=utf-8"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<?xml version=\"1.0\" ?>\n<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <S:Body>\n        <ns2:getById xmlns:ns2=\"http://service.hillel.edu/\">\n            <arg0>491e46f7-45f3-4d19-a538-594f675fa15c</arg0>\n        </ns2:getById>\n    </S:Body>\n</S:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{OrderServicePortBaseUrl}}/orders",
+          "host": [
+            "{{OrderServicePortBaseUrl}}"
+          ],
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "getOrderById response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" ?>\n<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <S:Body>\n        <ns2:getById xmlns:ns2=\"http://service.hillel.edu/\">\n            <arg0>491e46f7-45f3-4d19-a538-594f675fa15c</arg0>\n        </ns2:getById>\n    </S:Body>\n</S:Envelope>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9999/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9999",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "xml",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/xml; charset=utf-8"
+            }
+          ],
+          "cookie": [],
+          "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <error>The element or type could not be found getOrderByIdResponse</error>\n  </soap:Body>\n</soap:Envelope>\n"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "OrderServicePortBaseUrl",
+      "value": "http://localhost:9999",
+      "type": "any"
+    }
+  ]
+}
