@@ -10,7 +10,6 @@ public class AppConfig {
         return new ProductRepository();
     }
 
-    @Bean
     public Cart cart() {
         return new Cart();
     }

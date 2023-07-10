@@ -50,7 +50,6 @@
         <JUnit5.version>5.9.2</JUnit5.version>
         <mysql-connector-j.version>8.0.33</mysql-connector-j.version>
         <log4j2.version>2.20.0</log4j2.version>
-        <spring.version>5.3.27</spring.version>
     </properties>
 
     <dependencies>
